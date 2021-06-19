@@ -8,10 +8,10 @@ function Employees (props) {
 
     return (
         <tr>
-            <td> <img src={picture.thumbnail} alt={name.first}/> </td>
+            <td> <img src={picture.medium} alt={name.first}/> </td>
             <td>{`${name.first} ${name.last}`}</td>
             <td>{phone}</td>
-            <td>{email}</td>
+            <td><a href={"mailto:" + email}>{email}</a></td>
             <td>{dob.date.slice(0,10)}</td>
         </tr>
       

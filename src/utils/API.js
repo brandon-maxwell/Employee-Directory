@@ -1,5 +1,5 @@
 import axios from "axios";
-const APIURL = "https://randomuser.me/api/?inc=picture,name,phone,email,dob&results=15";
+const APIURL = "https://randomuser.me/api/?inc=picture,name,phone,email,dob&results=25&nat=us";
 
 let request = {
   getEmployees: function() {
