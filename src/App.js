@@ -1,8 +1,9 @@
 import React from "react";
 import Wrapper from "./components/Wrapper";
-import Header from "./components/Header/header";
+import Header from "./components/Header/Header";
 import Search from "./components/Search/index"
-import Table from "./components/Table/table";
+import Table from "./components/Table/Table";
+import Employees from "./components/Employees/Employees";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
       <Search>
       </Search>
       <Table>
+        <Employees>
+
+        </Employees>
       </Table>
     </Wrapper>
   );

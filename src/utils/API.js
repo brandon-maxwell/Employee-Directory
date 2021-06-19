@@ -1,9 +1,10 @@
 import axios from "axios";
+const APIURL = "https://randomuser.me/api/?inc=picture,name,phone,email,dob&results=15";
 
-// Export an object containing methods we'll use for accessing the Random User API
-
-export default {
+let request = {
   getEmployees: function() {
-    return axios.get("https://randomuser.me/api/?inc=name,email,phone,picture&results=15");
+    return axios.get(APIURL);
   },
 };
+
+export default request

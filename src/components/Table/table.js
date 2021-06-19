@@ -1,7 +1,24 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "./table.css";
+import Employees from "../Employees/Employees";
+import Api from '../../utils/API'; 
 
-function Table(props) {
+function Table() {
+
+    const [employees, setEmployees] = useState([]); 
+
+    useEffect(() => {
+        Api.getEmployees()
+        .then(data => {
+            console.log(data.data.results); 
+
+            setEmployees(data.data.results); 
+        })
+       
+    }, [])
+
+
+
     return (
         <table className="table">
             <thead>
@@ -14,13 +31,13 @@ function Table(props) {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td></td>
-                    <td>Test</td>
-                    <td>555-555-5555</td>
-                    <td>Test@test.io</td>
-                    <td>1/1/11</td>
-                </tr>
+             {
+               employees.length ? employees.map((employee, index) => {
+                  return (  <Employees data={employee} key={index} /> )
+               }): (<div>no employees</div>)
+ 
+             }
+
             </tbody>
         </table>
     );
