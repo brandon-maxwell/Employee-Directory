@@ -6,7 +6,7 @@ function Table(props) {
 
 
     return (
-        <table className="table">
+        <table className="table table-striped table-hover">
             <thead>
                 <tr>
                     <th className="col">Image</th>
