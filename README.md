@@ -5,7 +5,7 @@
 This app is an employee directory that generates 25 random employees when accessed. It allows the user the ability to search for specific users based on their employee data. 
 
 ## Link to Page
-
+https://brandon-maxwell.github.io/Employee-Directory/
 
 ## Preview of Application:
 ![preview screenshot](public/assets/images/Screenshot.png)
